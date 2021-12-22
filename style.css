@@ -1,0 +1,874 @@
+*{
+	margin:  0px;
+	padding: 0px;
+}
+
+.load{
+	width: 100%;
+	height: 100%;
+	opacity: 0.88;
+	background: #ffff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100000000000000000;
+	display: block;
+	overflow: hidden;
+}
+.load img{
+	width: 150px;
+	position: absolute;
+	height: 150px;
+	top: 50%;
+	left: 50%;
+	margin-top: -75px;
+	margin-left: -76px;
+}
+
+#noty{
+	background: grey;
+	font-size: 18px;
+	border-radius: 8px;
+	border: 2px solid #ccc;
+	margin: 0em 1em 0em 1em;
+}
+
+#notytop h4{
+	margin-top: 0em;
+	color: white;
+	font-family: tahoma;
+	font-size: 20px;
+	text-align: center;
+	padding: 0.5em;
+}
+
+ul{
+	list-style: none;
+}
+
+nav{
+	background-color: #f0f2f5;
+}
+
+nav #main-menu {
+	margin: 0em 0em 0em 7em;
+}
+
+nav #main-menu li{
+	margin: 3px;
+}
+
+#content3{
+	background: #fcfcfe;
+	height: 100vh;
+	overflow: hidden;
+	background-image: url('https://scontent.fhph1-3.fna.fbcdn.net/v/t1.15752-9/263357932_253039760227648_3367528044069518187_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=ae9488&_nc_ohc=_I7o80nxk9IAX_KpyLI&tn=hir83SXtEoTRG0d7&_nc_ht=scontent.fhph1-3.fna&oh=03_AVISfYmOrVqvrEVd3QB0wy1KFu2XUlOjth7s8lne4C46Fw&oe=61E6AEB1');
+}
+
+nav #main-menu li a{
+	color: black;
+	text-decoration: none;
+	display: block;
+	padding: 9px 12px;
+	font-family: tahoma;
+}
+
+nav #main-menu li a img{
+	float: left;
+    margin-right: 0.5em;
+    margin-top: -0.5em;
+}
+
+#main-menu{
+	display: flex;
+}
+
+#header ul li a{
+	float:  left;
+}
+
+.active{
+	background: white;
+	font-weight: bold;
+	border-radius: 6px;
+	border-bottom: 3px solid #04c5b1;
+}
+
+nav #main-menu li a.active{
+		color: #04c5b1;
+		padding: 8px 11px;
+}
+
+nav #main-menu li:hover a{
+	background: white;
+	color:  #04c5b1;
+	border-radius: 6px;
+	transition: all 0.1s;
+}
+
+nav #main-menu li:hover img{
+	background: white;
+	transition: all 0.1s;
+}
+
+#toggle{
+	display: none;
+	background: #f0f2f5;
+	color: black;
+	text-align: right;
+	padding: 20px;
+	cursor: pointer;
+}
+
+#content{
+	border-top: 3px solid white;
+}
+
+#content p{
+	text-align: center;
+	font-weight: 500;
+	font-family: tahoma;
+	border-radius: 5px;
+	border: 2px solid #04c5b1;
+	margin: 1em 25em 0em 25em;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+#content a.hienlinh{
+		font-weight: 600;
+		font-family: tahoma;
+		color: #04c5b1;
+	}
+
+#content #quylop h2{
+	text-align: center;
+	font-family: tahoma;
+	font-size: 50px;
+	margin: 5em 10em 0em 10em;
+	border-bottom: 5px solid #04c5b1;
+	color: #29d5af;
+}
+
+#content #quylop h3{
+	text-align: center;
+	font-family: tahoma;
+	font-size: 52px;
+	color: #00b4c9;
+}
+
+/* Main Left */
+
+#left{
+	width: 20%;
+	float: left;
+	height: 100vh;
+	background: #f0f2f5;
+	overflow-y: scroll;
+}	
+
+#left h2{
+	font-family: tahoma;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 5px;
+	border: 2px solid #ccc;
+	line-height: 36px;
+	background: linear-gradient(to bottom right,#26bdd1,#04d0a1);
+	margin: 0.5em 0.5em 0.5em 0.5em;
+	color: white;
+}
+
+#left li a{
+	color: black;
+	font-size: 14px;
+	font-weight: 600;
+	font-family: tahoma;
+	text-decoration: none;
+	margin: 0em 0em 0em 0em;
+	line-height: 36px;
+	padding: 10px 20px 10px 20px;
+}
+
+#left li:hover {
+	background: #e4e6e9;
+	border-radius: 9px;
+	transition: all 0.1s;
+}
+
+#left li:hover a{
+	padding: 10px 10px;
+}
+
+#left li{
+	border-radius: 6px;
+	border: 1px solid #ccc;
+	margin: 0.25em 0.75em 0.25em 0.75em;
+}
+
+
+/*Tab Thành viên*/
+
+#thanhvien{
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+#thanhvien li a{
+	color: black;
+	font-size: 14px;
+	font-weight: 600;
+	font-family: tahoma;
+	text-decoration: none;
+	line-height: 36px;
+	margin: 0em 0em 0em 3em;
+	border-radius: 5px;
+	padding: 10px 40em 10px 1em;
+}
+
+#thanhvien li:hover {
+	background: linear-gradient(to bottom right,#04d0a1,#26bdd1);
+	border-radius: 9px;
+	transition: all 0.1s;
+}
+
+#thanhvien li:hover a{
+	margin: 0em 0em 0em 0em;
+}
+
+#thanhvien li{
+	border-radius: 6px;
+	border: 1px solid #ccc;
+	margin: 0.25em 19em 0.25em 19em;
+}
+
+/* Main Center (display content)*/
+
+#center{
+	width: 56%;
+	height: 100vh;
+	float: left;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	background: #f0f2f5;
+	overflow-y: scroll;
+}
+
+#center #banner img{
+	width: 52em;
+	border: 1px solid #ccc;
+	border-radius: 9px;
+	margin: 1em 0em 0em 0.5em;
+}
+
+/*News feed*/
+
+	#center #newsfeed{
+		margin: 0.75em 6em 0.5em 6em;
+	}
+
+	#center #newsfeed li{
+		background: #fff;
+		border-radius: 8px;
+		border: 1px solid #ccc;
+		margin: 0em 0em 1em 0em;
+	}
+
+	#center #newsfeed img{
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+	}
+
+	#center #newsfeed h3{
+		font-family: tahoma;
+		font-weight: bold;
+		font-size: 18px;
+		margin: 0.5em 0em 0em 1em;
+	}
+
+	#center #newsfeed b{
+		font-family: inherit;
+		color: gray;
+		font-weight: 600;
+		font-size: 11px;
+		margin:0em 0em 0em 2.5em;
+	}
+
+	#center #newsfeed h4{
+		font-family: tahoma;
+		color: black;
+		text-align: start;
+		font-size: 16px;
+		font-weight: 500;
+		margin: 0em 0.5em 1em 1em;
+	}
+
+	#center #newsfeed img{
+		border: 1px solid #ccc;
+		margin-bottom: 1em;
+	}
+
+/*main right*/
+
+#right{
+	width: 23.8%;
+	float: right;
+	height: 100vh;
+	overflow-y: scroll;
+	background: #f0f2f5;
+}
+
+#right li{
+	border-bottom: 1px solid #ccc;
+	margin-top: 0.5em;
+}
+
+#right iframe{
+	margin: 0.5em 0em 0em 0.6em;
+	border-radius: 9px;
+	border: 1px solid #ccc;
+	width: 290px;
+	height: 160px;
+}
+
+#right h3{
+	font-family: tahoma;
+	margin: 0em 0em 0em 0.5em;
+}
+
+/* custom scroll */
+
+::-webkit-scrollbar{
+	width: 10px;
+	background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: lightgrey;
+	border-radius: 5px;
+}
+
+#thanthia img{
+	margin-bottom: 2em;
+}
+
+#thanthia{
+	border-bottom: 5px solid #04c5b1;
+	margin: 0em 5em 0em 5em;
+}
+
+img.cangiua {display: block; margin-left: auto; margin-right: auto; margin-top: 1em;}
+textarea.cangiua2 {
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto; 
+	margin-top: 1em;
+	width: 50%; 
+	line-height: 50px; 
+	border-radius: 9px; 
+	border: 2px solid #04c5b1;
+	padding-left: 1em;
+}
+
+button.cangiua3{
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto; 
+	margin-top: 1em;
+	width: 10em; 
+	line-height: 30px; 
+	border-radius: 6px; 
+	font-weight: 600;
+	border: 2px solid #04c5b1;
+	background: #04c5b1;
+}
+
+button.cangiua4{
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto; 
+	margin-top: 1em;
+	width: 17em; 
+	line-height: 30px; 
+	border-radius: 6px; 
+	font-weight: 600;
+	border: 2px solid #04c5b1;
+	background: #04c5b1;
+	color: white;
+	font-size: 15px;
+}
+
+.cangiua4 a{
+	text-decoration: none;
+	padding: 10px 24px;
+	line-height: 40px;
+	color: white;
+	font-size: 18px;
+}
+
+.cangiua4 a:hover{
+	color: white;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.cangiua3 a{
+	text-decoration: none;
+	padding: 10px 15px;
+	color: white;
+}
+
+.cangiua3 a:hover{
+	text-decoration: none;
+	color: white;
+	font-weight: 600;
+}
+
+#download button:hover{
+	background: #04c5b1;
+	border-radius: 6px; 
+	border: 2px solid #fff;
+}
+
+#center #banner img{
+		width: 98%;
+}
+
+
+#downloadfiles a{
+	text-align: center;
+	color: black;
+	font-weight: 600;
+	line-height: 40px;
+	padding: 0.5em;
+	text-decoration: none;
+	align-self: center;
+}
+
+#downloadfiles img{
+	margin: 0.2em 0.5em -0.5em 0em;
+}
+
+
+#option2 a{
+	color: red;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 33px;
+	padding: 1em;
+	text-decoration: none;
+	margin: 0em 0em 0em 0em;
+}
+
+#option2 a:hover{
+	color: white;
+}
+
+#option2 img{
+	margin: 0.25em 0.5em -0.5em 0em;
+}
+
+#notybot button{
+	border-radius: 7px;
+	border: 1px solid #ccc;
+	margin-left: 15em ;
+	margin-bottom: 1em;
+}
+
+#noty{
+	margin: 0em 25em 0em 25em;
+}
+
+#option a{
+	color: red;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 33px;
+	padding: 1em;
+	text-decoration: none;
+	margin: 0em 0em 0em 0em;
+}
+
+#option a:hover{
+	color: white;
+}
+
+#option img{
+	margin: 0.25em 0.5em -0.5em 0em;
+}
+
+#canlenoel{
+	text-align: center;
+}
+
+#canlenoel button{
+	margin: 3em 0em 0em 7em;
+	border-radius: 8px;
+	border: 2px solid white;
+}
+
+#canlenoel button:hover{
+	background: red;
+}
+
+#download{
+	float: left;
+	width: 50%;
+	color: black;
+}
+
+#download h2{
+	font-family: tahoma;
+	font-size: 2.57em;
+	margin: 2em 0em 0.25em 2em;
+}
+
+#download h3{
+	font-family: tahoma;
+	margin: 1em 0em 0.5em 4.6em;
+}
+
+#download ul{
+	font-family: tahoma;
+	margin: 1em 0em 2em 6em;
+}
+
+#download button{
+	margin: 1em 0em 2em 5em;
+	border-radius: 8px;
+}
+
+#download button a:hover{
+	color: white;
+}
+
+#vongquay h2{
+	font-family: tahoma;
+	font-size: 28px;
+	text-align: center;
+	margin: 2em 0em 0em 0em;
+	color: white;
+}
+
+#vongquay h3{
+	font-family: tahoma;
+	text-align: left;
+	align-self: start;
+	color: white;
+	margin: 1em 0em 0.5em 20em;
+}
+
+#vongquay ul{
+	font-family: tahoma;
+	color: white;
+	margin: 1em 0em 2em 25em;
+}
+
+#minhhoa{
+	width: auto;
+}
+
+#minhhoa img{
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	width: 600px;
+	margin: 7em 0em 0em 2em;
+}
+
+/* Moblie Moblie Moblie Moblie Moblie Moblie Moblie Moblie Moblie Moblie  */
+
+@media screen and (max-width: 900px) {
+
+	/*Main menu mobile*/
+
+	#main-menu{
+		flex-direction: column;
+		text-align: left;
+	}
+	#toggle{
+		display: block;
+	}
+
+	#notybot button{
+		margin-left: 3em;
+	}
+
+	#noty{
+	margin: 1em 2em 0em 2em;
+	}
+
+	#main-menu li{
+		border-bottom: 2px solid white;
+	}
+
+	#main-menu li a{
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	nav{
+		display: none;
+	}
+
+	nav #main-menu li a img {
+    	float: left;
+    	margin-right: 0.5em;
+    	margin-top: -0.25em;
+	}
+
+	nav #main-menu {
+	margin: 0.2em 0em 0em 0em;
+	}
+
+	#header ul li a{
+		float:  left;
+		margin: 8px 0px 0px 8px;
+	}
+
+	#content p{
+		margin: 1em 4em 0em 4em;
+		text-align: justify;
+	}
+
+	/*Main Left Mobile*/
+
+	#left{
+		display: none;
+	}
+
+	/*Main right*/
+
+	#right{
+		display: none;
+	}
+
+	/*Main Center*/
+
+	#center{
+		width: 100%;
+		height: 100vh;
+	}
+
+	#center #banner img{
+		border: 1px solid #ccc;
+		border-radius: 7px;
+		margin: 0em 0em 0em 0.25em;
+	}
+
+	::-webkit-scrollbar{
+		width: 0px;
+		background: white;
+	}
+
+	/*news feed*/
+
+	#center #newsfeed{
+		margin: 0.75em 0.2em 0.5em 0em;
+	}
+
+	#center #newsfeed h3{
+		font-family: tahoma;
+		font-weight: bold;
+		font-size: 18px;
+		margin: 0.5em 0em 0em 0.5em;
+	}
+
+	#center #newsfeed b{
+		font-family: inherit;
+		color: gray;
+		font-size: 12px;
+		margin:0em 0em 0em 1.5em;
+	}
+
+	#center #newsfeed h4{
+		font-family: tahoma;
+		color: black;
+		text-align: start;
+		font-size: 14px;
+		font-weight: 500;
+		margin: 0em 0em 0.5em 0.5em;
+	}
+
+	#center #newsfeed img{
+		border: 1px solid #ccc;
+		margin-bottom: 1em;
+	}
+
+	#content #quylop h2{
+		font-size: 36px;
+		margin: 5em 1em 0em 1em;
+	}
+
+	#content #quylop h3{
+		font-size: 30px;
+	}
+
+	/*Tab thành viên*/
+
+	#thanhvien li a{
+		color: black;
+		font-size: 14px;
+		font-weight: 600;
+		font-family: tahoma;
+		text-decoration: none;
+		line-height: 36px;
+		margin: 0em 0em 0em 2em;
+		border-radius: 5px;
+		padding: 10px 4em 10px 4em;
+	}
+
+	#thanhvien li:hover {
+		background: #e4e6e9;
+		border-radius: 9px;
+		transition: all 0.1s;
+		text-align: center;
+	}
+
+	#thanhvien li:hover a{
+		background: #e4e6e9;
+		margin: 0em 0em 0em 0em;
+	}
+
+	#thanhvien li{
+		border-radius: 6px;
+		border: 1px solid #ccc;
+		margin: 0.25em 0.25em 0.25em 0.25em;
+	}
+
+	#thanthia img{
+		display: block; margin-left: auto; margin-right: auto;
+	}
+
+	#thanthia{
+		border-bottom: 3px solid #04c5b1;
+		margin: 0em 2em 0em 2em;
+	}	
+
+	#minhhoa img{
+		width: 500px;
+		width: 98%;
+		margin: 0em 0em 0em 0.25em;
+	}
+
+	#download{
+		width: 100%;
+		color: black;
+	}
+
+	#download h2{
+		font-size: 27px;
+		margin: 1em 0em 0.25em 0.25em;
+	}
+
+	#download h3{
+		font-size: 16px;
+		font-weight: 600;
+		margin: 1em 0em 0.5em 0.5em;
+	}
+
+	#download ul{
+		margin: 1em 0em 2em 0em;
+	}
+
+	#download button{
+		margin: 0em 0em 0em 0.5em;
+		border-radius: 8px;
+	}
+
+	#canle{
+		margin: 0em 0em 7em 0.5em;
+	}
+
+	#download button a:hover{
+		color: white;
+	}
+
+	#content3{
+		overflow-y: scroll;
+		height: 100vh;
+	}
+
+	#vongquay h2{
+		margin: 2em 0em 0em 0em;
+	}
+
+	#vongquay h3{
+		margin: 1em 0em 0.5em 0.5em;
+	}
+
+	#vongquay ul{
+		margin: 1em 0em 2em 0em;
+	}	
+
+	#option a{
+		color: black;
+		font-size: 18px;
+		margin: 0em 0em 0em 0em;
+	}
+
+	#option img{
+		margin: 0.25em 0.5em -0.5em 0em;
+	}
+
+	#canlenoel button{
+		margin: 3em 0em 0em 0em;
+	}
+
+}
+
+@media screen (max-width: 1357px)and (min-width: 901px){
+
+	#left li a{
+		color: black;
+		font-size: 11px;
+	}
+
+	#minhhoa img{
+		width: 500px;
+	}
+
+	#left li:hover {
+		background: #e4e6e9;
+		border-radius: 9px;
+		transition: all 0.1s;
+	}
+
+	#left li:hover a{
+		padding: 10px 40px;
+	}
+
+	#left li{
+		border-radius: 6px;
+		border: 1px solid #ccc;
+		margin: 0.25em 0.75em 0.25em 0em;
+	}
+
+	#right iframe{
+		width: 275px;
+		height: 154px;
+	}
+
+	#thanhvien li a{
+		padding: 10px 30em 10px 1em;
+	}
+
+	#thanhvien li:hover a{
+		text-align: center;
+	}
+
+	#thanhvien li{
+		margin: 0.25em 19em 0.25em 19em;
+	}
+}
+
+@media screen and (min-width: 1400px){
+	#left li a{
+		color: black;
+		font-size: 15px;
+	}
+
+	#right iframe{
+		margin: 0.5em 0em 0em 1.125em;
+		width: 320px;
+		height: 190px;
+	}
+}

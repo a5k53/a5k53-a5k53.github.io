@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="Pictures/logonew.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <title>A5K53 - Thần thìa hiển linh</title>
+</head>
+<script type='text/javascript'>
+//<![CDATA[
+var pictureSrc ="https://scontent-sin6-3.xx.fbcdn.net/v/t1.15752-9/266989075_433161591849343_7648796493751814496_n.png?_nc_cat=104&ccb=1-5&_nc_sid=ae9488&_nc_ohc=AbzjUCv9geEAX-gkL3x&_nc_ht=scontent-sin6-3.xx&oh=03_AVJGqp8wUUkf7q4kYAEx5xuvM1QwkANJc49SKdVRkgjQAw&oe=61E47658"; //the location of the snowflakes
+var pictureWidth = 15; //the width of the snowflakes
+var pictureHeight = 15; //the height of the snowflakes
+var numFlakes = 25; //the number of snowflakes
+var downSpeed = 0.01; //the falling speed of snowflakes (portion of screen per 100 ms)
+var lrFlakes = 15; //the speed that the snowflakes should swing from side to side
+
+
+if( typeof( numFlakes ) != 'number' || Math.round( numFlakes ) != numFlakes || numFlakes < 1 ) { numFlakes = 10; }
+
+//draw the snowflakes
+for( var x = 0; x < numFlakes; x++ ) {
+  if( document.layers ) { //releave NS4 bug
+  document.write('<layer id="snFlkDiv'+x+'"><imgsrc="'+pictureSrc+'" height="'+pictureHeight+'"width="'+pictureWidth+'" alt="*" border="0"></layer>');
+  } else {
+  document.write('<div style="position:absolute; z-index:9999;"id="snFlkDiv'+x+'"><img src="'+pictureSrc+'"height="'+pictureHeight+'" width="'+pictureWidth+'" alt="*"border="0"></div>');
+  }
+}
+
+//calculate initial positions (in portions of browser window size)
+  var xcoords = new Array(), ycoords = new Array(), snFlkTemp;
+  for( var x = 0; x < numFlakes; x++ ) {
+  xcoords[x] = ( x + 1 ) / ( numFlakes + 1 );
+  do { snFlkTemp = Math.round( ( numFlakes - 1 ) * Math.random() );
+  } while( typeof( ycoords[snFlkTemp] ) == 'number' );
+  ycoords[snFlkTemp] = x / numFlakes;
+  }
+
+//now animate
+function flakeFall() {
+  if( !getRefToDivNest('snFlkDiv0') ) { return; }
+  var scrWidth = 0, scrHeight = 0, scrollHeight = 0, scrollWidth = 0;
+  //find screen settings for all variations. doing this every time allows for resizing and scrolling
+  if( typeof( window.innerWidth ) == 'number' ) { scrWidth = window.innerWidth; scrHeight = window.innerHeight; } else {
+  if( document.documentElement && (document.documentElement.clientWidth ||document.documentElement.clientHeight ) ) {
+  scrWidth = document.documentElement.clientWidth; scrHeight = document.documentElement.clientHeight; } else {
+  if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+  scrWidth = document.body.clientWidth; scrHeight = document.body.clientHeight; } } }
+  if( typeof( window.pageYOffset ) == 'number' ) { scrollHeight = pageYOffset; scrollWidth = pageXOffset; } else {
+  if( document.body && ( document.body.scrollLeft ||document.body.scrollTop ) ) { scrollHeight = document.body.scrollTop;scrollWidth = document.body.scrollLeft; } else {
+  if(document.documentElement && (document.documentElement.scrollLeft ||document.documentElement.scrollTop ) ) { scrollHeight =document.documentElement.scrollTop; scrollWidth =document.documentElement.scrollLeft; } }
+  }
+  //move the snowflakes to their new position
+  for( var x = 0; x < numFlakes; x++ ) {
+  if( ycoords[x] * scrHeight > scrHeight - pictureHeight ) { ycoords[x] = 0; }
+  var divRef = getRefToDivNest('snFlkDiv'+x); if( !divRef ) { return; }
+  if( divRef.style ) { divRef = divRef.style; } var oPix = document.childNodes ? 'px' : 0;
+  divRef.top = ( Math.round( ycoords[x] * scrHeight ) + scrollHeight ) + oPix;
+  divRef.left = ( Math.round( ( ( xcoords[x] * scrWidth ) - (pictureWidth / 2 ) ) + ( ( scrWidth / ( ( numFlakes + 1 ) * 4 ) ) * (Math.sin( lrFlakes * ycoords[x] ) - Math.sin( 3 * lrFlakes * ycoords[x]) ) ) ) + scrollWidth ) + oPix;
+  ycoords[x] += downSpeed;
+  }
+}
+
+//DHTML handlers
+function getRefToDivNest(divName) {
+if( document.layers ) { return document.layers[divName]; } //NS4
+if( document[divName] ) { return document[divName]; } //NS4 also
+if( document.getElementById ) { return document.getElementById(divName); } //DOM (IE5+, NS6+, Mozilla0.9+, Opera)
+if( document.all ) { return document.all[divName]; } //Proprietary DOM - IE4
+return false;
+}
+
+window.setInterval('flakeFall();',100);
+//]]>
+</script>  
+<body class="preloading">
+<div class="load">
+  <img src="Pictures/logo.gif">
+</div>
+<div class="content_body">
+  <audio  autoplay loop >
+      <source src="Audio/Nhac_thien_short.mp3" type="audio/mpeg">
+      Trình duyệt không hỗ trợ phát âm thanh
+    </audio>
+  <script>
+    $(document).ready(function(){
+      $('#toggle').click(function(){
+        $('nav').slideToggle();
+      })
+    })
+  </script>
+  <div id="wrapper">
+    <div id="header">
+      <ul>
+        <li>
+          <a href="index.html"><img src="Icons/ilogo.png" alt="" height="35px"/></a>
+        </li>
+      </ul>
+    </div>
+      <div id="toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav>
+        <ul id="main-menu">
+          <li>
+            <a href="index.html"><img src="Icons/itrangchu.png" alt="" height="30px"/>Trang chủ</a>
+          </li>
+          <li>
+            <a href="quylop.html" ><img src="Icons/iquylop.png" alt="" height="30px"/>Quỹ lớp</a>
+          </li>
+          <li>
+            <a href="thanhvien.html"><img src="Icons/ithanhvien.png" alt="" height="30px"/>Thành viên</a>
+          </li>
+          <li>
+            <a href="https://docs.google.com/document/d/1hlXLSxiUoc1JJJuMmWt3VMrveXqXSLETayITSNqUJhc/edit" target="blank"><img src="Icons/ilienhe.png" alt="" height="30px"/>Liên hệ</a>
+          </li>
+          <li>
+            <a href="https://a5k53family.blogspot.com/?fbclid=IwAR0vmNLqSquOEwL0E4cNgm1ps6OOwJKDsPeAnDi7yOWA5VIDfHvPw3NzvJA" target="blank"><img src="Icons/ihoianhem.png" alt="" height="30px"/>Hội anh em A5</a>
+          </li>
+          <li>
+            <a href=""><img src="Icons/ianhkyyeu.png" alt="" height="30px"/>Album</a>
+          </li>
+          <li>
+            <a href="thanthia.html" class="active"><img src="Icons/ithanthia.png" alt="" height="30px"/>Thần thìa</a>
+          </li>
+          <li>
+            <a href="download.html"><img src="Icons/download.png" alt="" height="30px"/>Download</a>
+          </li> 
+          <li>
+            <a href="Vongquay.html"><img src="Icons/vongquay.svg" alt="" height="30px"/>Vòng quay</a>
+          </li>
+        </ul>
+      </nav>
+  </div>
+  <div id="content">
+    <div id="thanthia">
+      <img src="https://media3.giphy.com/media/3uDOVKmHeZy6KZRPEe/giphy.gif?cid=790b7611fb7ed29ad0c39bd0f4881f853870eda4d7c06269&rid=giphy.gif&ct=g" width="238" class="cangiua" >
+    </div>
+    <p>Nếu <a class="hienlinh">"Thắp Hương"</a> xong mà không có nhạc, chứng tỏ độ tín nhiệm của bạn với Thần thìa thấp. Hãy thành tâm <a class="hienlinh">"Khấn vái"</a></p>
+    <button id="play" class="cangiua4"><a href="#">Khấn vái Thần thìa</a></button>
+    <script src="jquery-1.10.1.min.js"></script>
+    <script src="main.js"></script>
+  </div>
+  </div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
