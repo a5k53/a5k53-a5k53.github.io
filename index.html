@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="demo_cache.appcache">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,48 +7,13 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-  <style>
-    * {box-sizing: border-box;}
-    .mySlides {display: none;}
-    img {vertical-align: middle;}
-
-    /* banner */
-    .banner {
-      position: relative;
-    }
-
-    /* Fading animation */
-    .fade {
-      -webkit-animation-name: fade;
-      -webkit-animation-duration: 2s;
-      animation-name: fade;
-      animation-duration: 2s;
-    }
-
-    @-webkit-keyframes fade {
-      from {opacity: .4} 
-      to {opacity: 1}
-    }
-
-    @keyframes fade {
-      from {opacity: .4} 
-      to {opacity: 1}
-    }
-    </style>
   <title>A5K53</title>
 </head>
 <body class="preloading">
 <div class="load">
-  <img src="https://cdn.fbsbx.com/v/t59.2708-21/269670200_2121522651337580_5039812661599525056_n.gif?_nc_cat=102&fallback=1&ccb=1-5&_nc_sid=041f46&_nc_ohc=r5cLURd0sAAAX8jkn8b&_nc_ht=cdn.fbsbx.com&oh=03_AVI-L4j7t4-9dGKOJKNAMcm_pL0JO8Xubnu5-z6eD0sujA&oe=61C55816">
+  <img src="Pictures/logo.gif">
 </div>
 <div class="content_body">
-  <script>
-    $(document).ready(function(){
-      $('#toggle').click(function(){
-        $('nav').slideToggle();
-      })
-    })
-  </script>
   <div id="wrapper">
     <div id="header">
       <ul>
@@ -262,29 +227,18 @@
         <span class="dot"></span> 
         <span class="dot"></span> 
       </div>
-      <script>
-          var slideIndex = 0;
-          showSlides();
-
-          function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " active";
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-          }
-      </script>
       <div id="newsfeed">
         <ul>
+          <li>
+            <h3>Sự kiện Merry Chrismates Vòng quay may mắn</h3>
+            <b>Admin · 23/12/2021 · Công khai</b>
+            <h4>
+              🎄 Sự kiện bắt đầu vào 0h00 ngày 25/12/2021<br>
+              🎄 Tổng giá trị giải thưởng lên đến dưới 1 tỷ đồng, cụ thể là gần 50k<br>
+              🎄 <a href="Vongquay.html" target="blank">Đi đến sự kiện</a>
+            </h4>
+        <a href="Vongquay.html" target="blank"><img src="https://scontent.fhph1-2.fna.fbcdn.net/v/t1.15752-9/265540967_254032600151428_5175455745023277406_n.png?_nc_cat=110&ccb=1-5&_nc_sid=ae9488&_nc_ohc=TNu9evyHiYQAX8sTYhX&_nc_ht=scontent.fhph1-2.fna&oh=03_AVK81bCJgeweK8W-JmdEGAcrky8tHoHIvoYgHb0uqDfJig&oe=61E29B0D" width="100%"></a>
+          </li>
           <li>
             <h3>Hướng dẫn nhập số điện thoại</h3>
             <b>Admin · 18/12/2021 · Công khai</b>
@@ -295,7 +249,7 @@
               ▶️ Bước 4: Đợi đến khi có mail báo về máy (Trong thời gian này admin sẽ duyệt xem có phải là người lớp mình hay không để mọi người trong lớp không bị làm phiền bởi những số máy lạ từ bên ngoài)<br>
               ▶️ Bước 5: Vào lại mục Liên hệ và nhập số điện thoại vào như bình thường (hiện tại đang có hơn 25 người đã nhập thành công số điện thoại)
             </h4>
-        <a href="https://docs.google.com/document/d/1hlXLSxiUoc1JJJuMmWt3VMrveXqXSLETayITSNqUJhc/edit" target="blank"><img src="Pictures/maxacnhan.png" width="99.5%"></a>
+        <a href="https://docs.google.com/document/d/1hlXLSxiUoc1JJJuMmWt3VMrveXqXSLETayITSNqUJhc/edit" target="blank"><img src="Pictures/maxacnhan.png" width="100%"></a>
           </li>
           <li>
             <h3>Chúc mừng sinh nhật cô</h3>
@@ -303,7 +257,7 @@
             <h4>
               Nhân ngày sinh nhật cô, tập thể lớp 12a5 (khóa 53).🥳 Chúc cô luôn mạnh khỏe, hạnh phúc bên gia đình và những người yêu thương.
             </h4>
-        <img src="Pictures/covan.jpg" width="99.5%">
+        <img src="Pictures/covan.jpg" width="100%">
           </li>
         </ul>
       </div>
@@ -336,5 +290,61 @@
   </div>
 </div>
 <script type="text/javascript" src="script.js"></script>
+<script>
+    $(document).ready(function(){
+      $('#toggle').click(function(){
+        $('nav').slideToggle();
+      })
+    })
+  </script>
+  <style>
+    * {box-sizing: border-box;}
+    .mySlides {display: none;}
+    img {vertical-align: middle;}
+
+    /* banner */
+    .banner {
+      position: relative;
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 2s;
+      animation-name: fade;
+      animation-duration: 2s;
+    }
+
+    @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    </style>
+    <script>
+          var slideIndex = 0;
+          showSlides();
+
+          function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+          }
+      </script>
 </body>
 </html>
