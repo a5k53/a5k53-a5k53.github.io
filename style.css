@@ -524,16 +524,28 @@ button.cangiua4{
 
 #vongquay h3{
 	font-family: tahoma;
-	text-align: left;
+	text-align: center;
 	align-self: start;
 	color: white;
-	margin: 1em 0em 0.5em 20em;
 }
 
 #vongquay ul{
 	font-family: tahoma;
 	color: white;
 	margin: 1em 0em 2em 25em;
+}
+
+#vongquay ul li{
+	text-decoration: none;
+	color: white;
+	margin-left: 1em;
+	margin-top: 0.5em;
+}
+
+#xemngay{
+	color: white;
+	font-weight: 600;
+	font-size: 15px;
 }
 
 #minhhoa{
@@ -756,10 +768,6 @@ button.cangiua4{
 		margin: 2em 0em 0em 0em;
 	}
 
-	#vongquay h3{
-		margin: 1em 0em 0.5em 0.5em;
-	}
-
 	#vongquay ul{
 		margin: 1em 0em 2em 0em;
 	}	
@@ -772,10 +780,6 @@ button.cangiua4{
 
 	#option img{
 		margin: 0.25em 0.5em -0.5em 0em;
-	}
-
-	#canlenoel button{
-		margin: 3em 0em 0em 0em;
 	}
 
 }
